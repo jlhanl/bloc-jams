@@ -33,3 +33,12 @@ window.onload = function() {
 
 }
       
+/*
+move to utilities.js when functional - add tag to html to load
+
+create function to accept a dom object 
+loop through all instances of items in object using for loop 
+change properties as needed
+
+*/
+
