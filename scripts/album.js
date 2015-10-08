@@ -74,9 +74,3 @@ window.onload = function() {
   setCurrentAlbum(albumPicasso);
 
 };
-
-
-
-
-
-}
