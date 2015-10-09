@@ -40,7 +40,7 @@ var createSongRow = function(songNumber, songName, songLength) {
      + ' <td class = "song-item-number">' + songNumber + '</td>'
      + ' <td class = "song-item-title">' + songName + '</td>' 
      + ' <td class = "song-item-duration">' + songLength + '</td>'
-     + ' </tr>'
+     + '</tr>'
      ;
 
   return template;
