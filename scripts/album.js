@@ -65,14 +65,13 @@ var createSongRow = function(songNumber, songName, songLength) {
 };
 
 
+var albumTitle = document.getItemByClassName('album-view-title')[0];
+var albumArtist = document.getItemByClassName('album-view-artist')[0];
+var albumReleaseInfo = document.getItemByClassName('album-view-release-info')[0];
+var albumImage = document.getItemByClassName('album-cover-art')[0];
+var albumSongList = document.getItemByClassName('album-view-song-list')[0];
+
 var setCurrentAlbum = function(album) {
-
-  var albumTitle = document.getItemByClassName('album-view-title')[0];
-  var albumArtist = document.getItemByClassName('album-view-artist')[0];
-  var albumReleaseInfo = document.getItemByClassName('album-view-release-info')[0];
-  var albumImage = document.getItemByClassName('album-cover-art')[0];
-  var albumSongList = document.getItemByClassName('album-view-song-list')[0];
-
   albumTitle.firstChild.nodeValue = album.name;
   albumArtist.firstChild.nodeValue = album.artist;
   albumReleaseInfo.firstChild.nodeValue = album.year + ' ' + album.label;
@@ -90,22 +89,39 @@ window.onload = function() {
 
   setCurrentAlbum(albumPicasso);
 
+  var albums = [albumPicasso, albumMarconi, albumAndy];
+  var index = 1;
+  albumImage.addEventListener("click", function(event){
+    setCurrentAlbum(albums[index]);
+    index++;
+    if (index == albums.length) {
+      index = 0;
+    }
+  });
 };
 
-// Album Toggle Assignment
+// My questions...
+// where did the event argument come from?
+// why wouldn't we use a for loop?
+// why does index need to be set to 1? To advance to second album?
+// wouldn't it advance to the next album just with i++ in a for loop?
+
+
+// My solution...
+
+//var albumToggle = function() {
+//  albumImage.addEventListenter("click", function() {
+//  for (i = 0; i < albums.length) {
+//    setCurrentAlbum(albums[i]);
+//  });
+//};
+
+
+//My Plan- Album Toggle Assignment...
+
 // add event listener to album cover
 // find album cover variable
 // give album cover addEventListener property function('click', callback)
 // use event listener to setCurrentAlbum (where should this go?)
-
-var albumToggle = function(album) {
-  for (i = 0; i < )
-
-
-};
-
-window.onload = function () {
-  document.albumImage.addEventListener("click", albumToggle);
-}
 
 
