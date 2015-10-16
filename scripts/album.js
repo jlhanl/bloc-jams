@@ -159,7 +159,7 @@ var filterTimeCode = function(timeInSeconds) {
   }
 
   output += remainingSeconds;
-  return outpus;
+  return output;
 };
 
 
